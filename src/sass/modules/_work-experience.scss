@@ -1,0 +1,134 @@
+@keyframes line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.workExp {
+  padding: 80px 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__boxes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    &:after {
+      width: 2px;
+      content: '';
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+    &.active-line {
+      &:after {
+        animation: line 2s forwards;
+      }
+    }
+  }
+  .circle {
+    position: relative;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: $white;
+    margin-bottom: 150px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: #fb6470;
+      border-radius: 50%;
+      border: 2px solid black;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  .box {
+    background-color: $darkBlue;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    width: 470px;
+    &.right {
+      top: 0;
+      right: -570px;
+      &:after {
+        left: -37px;
+        top: 20px;
+      }
+    }
+    &.left {
+      bottom: 0;
+      left: -570px;
+      &:after {
+        transform: rotate(180deg);
+        right: -36px;
+        bottom: 20px;
+      }
+    }
+    &__title {
+      font-size: 22px;
+      color: $white;
+      margin-bottom: 15px;
+    }
+    &__sub-text {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: $red;
+    }
+    &__text {
+      color: $white;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 37px;
+      height: 30px;
+      background: url('../../img/arrowMessage.png') no-repeat center center;
+    }
+  }
+}
+.progressBar {
+  position: relative;
+  height: 10px;
+  width: 200px;
+  background: #bcbcbe;
+  &__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    background-color: $red;
+    height: 10px;
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: $red;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.header {
+  background-color: $white;
+  padding: 22px 15px;
+  .wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__row {
+   
+  }
+  &__toggleBtn {
+    display: none;
+  }
+  &__logo {
+
+  }
+  &__nav {
+    a {
+      font-size: 14px;
+      color: $colorNav;
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.work {
+  .sectionTitle {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  &__sub-text {
+    font-size: 14px;
+    color: $gray2;
+    text-align: center;
+  }
+  &__boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    flex-direction: column;
+  }
+  .box {
+    position: relative;
+    &__img {
+      max-width: 556px;
+      height: 300px;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+    .content {
+      position: absolute;
+      top: -57px;
+      z-index: 1;
+      max-width: 360px;
+      height: 100%;
+      max-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15px 60px 15px 40px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+      &.left {
+        left: -290px;
+      }
+      &.right {
+        right: -290px;
+      }
+      &.red {
+        border-bottom: 3px solid $red;
+      }
+      &.green {
+        border-bottom: 3px solid $green;
+      }
+      &__left {
+        margin-right: 35px;
+        .number {
+          margin-top: -30px;
+          font-size: 50px;
+          color: $lightGray2;
+        }
+      }
+      &__title {
+        color: $colorNav;
+        font-size: 25px;
+        margin-bottom: 30px;
+      }
+      &__text {
+        font-size: 15px;
+        color: $gray2;
+        line-height: 25px;
+      }
+      &__row {
+        display: flex;
+      }
+    }
+  }
+}
