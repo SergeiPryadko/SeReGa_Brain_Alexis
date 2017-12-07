@@ -4220,7 +4220,8 @@ p {
 .blog__wrap {
   display: flex;
   justify-content: space-between;
-  margin-top: 80px; }
+  margin-top: 80px;
+  margin-bottom: 80px; }
 
 .blog__col {
   width: calc((100% - 15px) / 2); }
@@ -4278,3 +4279,46 @@ p {
     color: #956dca; }
   .blog .box__link.yellow {
     color: #feb960; }
+
+.why-select-us {
+  padding: 80px 15px;
+  background-color: #f7f7f7; }
+  .why-select-us .select__boxes {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap; }
+    .why-select-us .select__boxes .box {
+      position: relative;
+      width: calc(33.3% - 50px);
+      max-width: 300px;
+      height: 100%;
+      max-height: 200px;
+      margin: 0 25px 50px 25px;
+      display: flex;
+      flex-direction: column; }
+      .why-select-us .select__boxes .box__img {
+        width: 100%;
+        min-height: 50px;
+        height: 100%;
+        max-height: 50px;
+        object-fit: contain;
+        display: flex;
+        margin-bottom: 35px; }
+        .why-select-us .select__boxes .box__img p {
+          margin-left: 20px;
+          color: #272727;
+          font-size: 18px; }
+      .why-select-us .select__boxes .box__text p {
+        font-size: 14px;
+        color: #616161; }
+  .why-select-us .sub-button {
+    text-align: center; }
+    .why-select-us .sub-button__text {
+      display: inline-block; }
+      .why-select-us .sub-button__text p {
+        color: #272727;
+        font-size: 25px; }
+    .why-select-us .sub-button__button {
+      display: inline-block;
+      margin-left: 50px; }
